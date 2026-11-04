@@ -70,7 +70,7 @@ class OnboardingTourViewModel {
     /// `profile_field`; a `setting_choice` step naming any other target is
     /// dropped at load like an unknown kind, because it could not be saved.
     private static let supportedSettingTarget = "profile_field"
-    private static let logger = Logger(subsystem: "org.siloserver.silo", category: "onboarding")
+    private static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "onboarding")
 
     var isLoading: Bool = true
     var steps: [OnboardingStep] = []

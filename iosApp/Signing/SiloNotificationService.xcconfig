@@ -3,7 +3,7 @@
 // can override any of these by dropping a `Local.xcconfig` into this
 // directory.
 
-SILO_NOTIFICATION_SERVICE_BUNDLE_ID = org.siloserver.silo.NotificationService
+SILO_NOTIFICATION_SERVICE_BUNDLE_ID = com.kxvn.ftvsilo.NotificationService
 SILO_NOTIFICATION_SERVICE_ENTITLEMENTS = NotificationService/NotificationService.entitlements
 
 PRODUCT_BUNDLE_IDENTIFIER = $(SILO_NOTIFICATION_SERVICE_BUNDLE_ID)

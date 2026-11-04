@@ -406,7 +406,7 @@ final class BandwidthProbeScheduler {
     /// without saying so cannot hold tests off.
     @ObservationIgnored private let videoPlayers = NSHashTable<AnyObject>.weakObjects()
 
-    private static let logger = Logger(subsystem: "org.siloserver.silo", category: "BandwidthProbe")
+    private static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "BandwidthProbe")
 
     init(server: BandwidthProbeServer, clock: PlayerPromptClock? = nil) {
         self.server = server
@@ -485,7 +485,7 @@ final class BandwidthProbeScheduler {
             let network = BandwidthProbeNetwork(path)
             Task { @MainActor in self?.networkChanged(network) }
         }
-        monitor.start(queue: DispatchQueue(label: "org.siloserver.silo.bandwidth-probe-path"))
+        monitor.start(queue: DispatchQueue(label: "com.kxvn.ftvsilo.bandwidth-probe-path"))
         pathMonitor = monitor
     }
 

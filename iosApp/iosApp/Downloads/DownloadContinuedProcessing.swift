@@ -28,7 +28,7 @@ final class DownloadContinuedProcessing {
     /// Each request needs a unique identifier under the wildcard listed in
     /// `BGTaskSchedulerPermittedIdentifiers` (iosApp/Info.plist).
     private static var identifierPrefix: String {
-        (Bundle.main.bundleIdentifier ?? "org.siloserver.silo") + ".downloads.continued"
+        (Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo") + ".downloads.continued"
     }
 
     /// The progress total until the first byte counts arrive.

@@ -78,7 +78,7 @@ enum DownloadFailureCause: Sendable, Equatable {
 /// resumes via HTTP Range, so this is an `NSObject` delegate (background
 /// sessions cannot use the async `URLSession` data API).
 final class DownloadSessionDelegate: NSObject, URLSessionDownloadDelegate, @unchecked Sendable {
-    static let sessionIdentifier = "org.siloserver.silo.downloads"
+    static let sessionIdentifier = "com.kxvn.ftvsilo.downloads"
 
     /// Builds before the continuum → silo rename ran their transfers in a
     /// session with this identifier. The system keeps that session's tasks

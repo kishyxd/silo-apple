@@ -16,7 +16,7 @@ import Security
 enum SharedStorage {
     /// Must match the `com.apple.security.application-groups` entitlement
     /// on both the main app and the extension.
-    static let appGroup = "group.org.siloserver.silo"
+    static let appGroup = "group.com.kxvn.ftvsilo"
 
     /// Must match the `keychain-access-groups` entitlement on both sides.
     /// Resolved from a build-expanded Info.plist value so personal-team
@@ -24,10 +24,10 @@ enum SharedStorage {
     static let keychainAccessGroup = RuntimeConfiguration.sharedKeychainAccessGroup
 
     /// Shared Keychain service name. Same on both sides.
-    static let keychainService = "org.siloserver.silo"
+    static let keychainService = "com.kxvn.ftvsilo"
 
     /// Every Keychain account the apps own starts with this prefix.
-    static let keychainAccountPrefix = "org.siloserver.silo."
+    static let keychainAccountPrefix = "com.kxvn.ftvsilo."
 
     /// Builds before the continuum → silo rename stored every item under
     /// this service, with `com.continuum.` where accounts now use
@@ -129,7 +129,7 @@ enum SharedStorage {
 }
 
 enum SideloadKeychainFallbackPolicy {
-    private static let canonicalAccessGroup = "org.siloserver.silo.shared"
+    private static let canonicalAccessGroup = "com.kxvn.ftvsilo.shared"
 
     static func isEnabled(buildChannel: String, isPreIOS26: Bool) -> Bool {
         buildChannel == "sideload" && isPreIOS26
@@ -158,7 +158,7 @@ enum SideloadKeychainFallbackPolicy {
 
 private enum RuntimeConfiguration {
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "RuntimeConfiguration"
     )
 
@@ -308,7 +308,7 @@ struct SharedDefaults: @unchecked Sendable {
 /// it on the Home Screen (i.e. before any user interaction with the app).
 struct SharedKeychain {
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "SharedKeychain"
     )
 

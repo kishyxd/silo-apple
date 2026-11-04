@@ -82,7 +82,7 @@ final class PlanSummaryJournal {
     /// Running summaries this run kept. Their plans may still be playing,
     /// so a replay leaves them; a plan's final summary may be replayed.
     private var runningThisRun: Set<String> = []
-    private static let logger = Logger(subsystem: "org.siloserver.silo", category: "PlanSummary")
+    private static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "PlanSummary")
 
     init(
         defaults: UserDefaults = .standard,

@@ -12,7 +12,7 @@ import OSLog
 /// after an interruption finishes the job. Needs no network.
 enum ServerMerge {
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "ServerMerge"
     )
 

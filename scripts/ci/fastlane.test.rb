@@ -353,7 +353,7 @@ class FastlaneReleaseTest < Minitest::Test
 
   def assert_distribution_options(platform)
     options = distribution_options
-    assert_equal "org.siloserver.silo", options[:app_identifier]
+    assert_equal "com.kxvn.ftvsilo", options[:app_identifier]
     assert_equal platform, options[:app_platform]
     assert_equal "1.4.0", options[:app_version]
     assert_equal "7", options[:build_number]

@@ -1,6 +1,6 @@
 name: Silo
 options:
-  bundleIdPrefix: org.siloserver.silo
+  bundleIdPrefix: com.kxvn.ftvsilo
   deploymentTarget:
     iOS: "18.0"
     macOS: "26.0"

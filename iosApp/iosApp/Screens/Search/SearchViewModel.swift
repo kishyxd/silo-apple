@@ -122,7 +122,7 @@ class SearchViewModel {
     /// The read in flight, shared by the title and people lookups.
     private var searchFeaturesTask: Task<CatalogSearchFeatures, Error>?
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "Search"
     )
     /// Where the next page of the current results starts; `nil` after the

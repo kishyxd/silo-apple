@@ -4,7 +4,7 @@
 // this directory. The extension needs no entitlements (no App Group or
 // keychain access — the host app pushes all content via ActivityKit).
 
-SILO_DOWNLOADS_ACTIVITY_BUNDLE_ID = org.siloserver.silo.DownloadsActivity
+SILO_DOWNLOADS_ACTIVITY_BUNDLE_ID = com.kxvn.ftvsilo.DownloadsActivity
 
 PRODUCT_BUNDLE_IDENTIFIER = $(SILO_DOWNLOADS_ACTIVITY_BUNDLE_ID)
 

@@ -331,7 +331,7 @@ final class ExternalSignInTests: XCTestCase {
         XCTAssertFalse(NativeSignIn.isCallback(deepLink), "silo:// deep links are not the sign-in redirect")
         XCTAssertThrowsError(try NativeSignInCallback.parse(deepLink, expectedState: "st", expectedServerId: Self.serverId,
             expectedIssuer: Self.origin))
-        let otherPath = try XCTUnwrap(URL(string: "org.siloserver.silo:/other?code=c&state=st&server=\(Self.serverId)"))
+        let otherPath = try XCTUnwrap(URL(string: "com.kxvn.ftvsilo:/other?code=c&state=st&server=\(Self.serverId)"))
         XCTAssertThrowsError(try NativeSignInCallback.parse(otherPath, expectedState: "st", expectedServerId: Self.serverId,
             expectedIssuer: Self.origin)) {
             XCTAssertEqual($0 as? ExternalSignInError, .incompleteCallback)
@@ -408,7 +408,7 @@ final class ExternalSignInTests: XCTestCase {
         var startURLs: [URL] { lock.withLock { opened } }
 
         @MainActor func authenticate(url: URL, callbackScheme: String) async throws -> URL {
-            XCTAssertEqual(callbackScheme, "org.siloserver.silo")
+            XCTAssertEqual(callbackScheme, "com.kxvn.ftvsilo")
             lock.withLock { opened.append(url) }
             try await whileOpen?()
             return try answer(url)
@@ -1424,7 +1424,7 @@ extension ExternalSignInTests {
         let strays = [
             Self.callback(["code": "c", "state": "someone-else", "server": Self.serverId]),
             Self.callback(["code": "c", "server": Self.serverId]),
-            try XCTUnwrap(URL(string: "org.siloserver.silo:/auth/callback")),
+            try XCTUnwrap(URL(string: "com.kxvn.ftvsilo:/auth/callback")),
         ]
         for stray in strays {
             XCTAssertFalse(runner.receiveExternalCallback(stray), stray.absoluteString)

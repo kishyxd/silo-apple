@@ -102,7 +102,7 @@ final class PersonalStateHolds {
 /// owner has been checked again, so callers can apply the result locally.
 @MainActor
 enum PersonalStateSync {
-    private static let logger = Logger(subsystem: "org.siloserver.silo", category: "personal-state")
+    private static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "personal-state")
 
     /// Throws `PersonalStateMutationError.held` for an unanswered or already
     /// held change, `HTTPError.requestIdentityChanged`/`.authorityChanged`

@@ -250,7 +250,7 @@ enum PosterImageCache {
             config.imageCache = memoryCache
 
             removeLegacyDataCache()
-            if let dataCache = try? DataCache(name: "org.siloserver.silo.posters") {
+            if let dataCache = try? DataCache(name: "com.kxvn.ftvsilo.posters") {
                 dataCache.sizeLimit = 1_024 * 1024 * 1024
                 config.dataCache = dataCache
             }

@@ -55,7 +55,7 @@ final class SiloControlBrowser {
     private nonisolated static let serviceTypes = [SiloControlProtocol.serviceType, SiloControlProtocol.rokuServiceType]
     private let selfHeal: BonjourSelfHeal
     private nonisolated static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "control.browser"
     )
 

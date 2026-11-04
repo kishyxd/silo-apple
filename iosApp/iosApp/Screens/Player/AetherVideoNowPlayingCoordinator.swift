@@ -150,7 +150,7 @@ final class AetherVideoNowPlayingCoordinator {
     }
 
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "VideoNowPlaying"
     )
 

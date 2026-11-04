@@ -11,8 +11,8 @@ final class ApplePushRegistrationTests: XCTestCase {
     }
 
     func testEmptyBundleIdentifiersFallBackToSiloTopic() {
-        XCTAssertEqual(ApplePushRegistrationWire.topic(bundleIdentifier: nil), "org.siloserver.silo")
-        XCTAssertEqual(ApplePushRegistrationWire.topic(bundleIdentifier: "   "), "org.siloserver.silo")
+        XCTAssertEqual(ApplePushRegistrationWire.topic(bundleIdentifier: nil), "com.kxvn.ftvsilo")
+        XCTAssertEqual(ApplePushRegistrationWire.topic(bundleIdentifier: "   "), "com.kxvn.ftvsilo")
         XCTAssertEqual(ApplePushRegistrationWire.topic(bundleIdentifier: "org.example.app"), "org.example.app")
     }
 

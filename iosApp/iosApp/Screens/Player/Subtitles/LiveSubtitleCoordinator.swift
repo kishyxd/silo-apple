@@ -166,7 +166,7 @@ final class RealLiveSubtitleClock: LiveSubtitleClock {
 final class LiveSubtitleCoordinator {
 
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "LiveSubtitle"
     )
 

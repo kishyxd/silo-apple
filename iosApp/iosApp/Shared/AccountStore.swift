@@ -108,7 +108,7 @@ final class AccountStore: @unchecked Sendable {
     static let profileTokenAudience: KeychainAudience = .currentUser
 
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "AccountStore"
     )
 

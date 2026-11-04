@@ -380,7 +380,7 @@ enum DownloadFilePaths {
 extension Logger {
     /// The category every Downloads type logs under.
     static let downloads = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "Downloads"
     )
 }

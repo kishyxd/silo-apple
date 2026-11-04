@@ -264,7 +264,7 @@ Then install and launch:
 ssh mac-builder 'xcrun devicectl device install app --device <DEVICE_ID> \
   ~/silo-build-ios/Build/Products/Debug-iphoneos/Silo.app'
 
-ssh mac-builder 'xcrun devicectl device process launch --device <DEVICE_ID> org.siloserver.silo'
+ssh mac-builder 'xcrun devicectl device process launch --device <DEVICE_ID> com.kxvn.ftvsilo'
 ```
 
 Stable derived-data paths (`~/silo-build-ios`, `~/silo-build-tvos`) keep incremental builds warm
@@ -279,7 +279,7 @@ asleep and needs a nudge from the remote.
 
 ```bash
 ssh mac-builder 'nohup xcrun devicectl device process launch \
-  --device <DEVICE_ID> --console org.siloserver.silo \
+  --device <DEVICE_ID> --console com.kxvn.ftvsilo \
   >> /tmp/silo-run.log 2>&1 </dev/null & disown'
 ```
 
@@ -396,7 +396,7 @@ buried under thousands of lines of Swift toolchain noise.
 | `~/Library/Developer/XcodeBuildMCP/workspaces/*/logs/` | Full build logs |
 | `/opt/homebrew/bin/xcodebuildmcp`, `/opt/homebrew/bin/xcodegen` | Tooling (absolute paths — Homebrew is not on the non-interactive `PATH`) |
 | `Silo` / `SiloTV` / `SiloMac` | iOS / tvOS / macOS schemes |
-| `org.siloserver.silo` | Default bundle ID (override in `Local.xcconfig`) |
+| `com.kxvn.ftvsilo` | Default bundle ID (override in `Local.xcconfig`) |
 
 ## Extending this to another Mac or another project
 

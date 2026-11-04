@@ -2,7 +2,7 @@
 // defaults in `Silo.xcconfig`, `SiloTV.xcconfig`,
 // `SiloTVTopShelf.xcconfig`, and `SiloNotificationService.xcconfig`. Use
 // this when you don't have access to the Silo Media L.L.C Apple Developer
-// team that owns `org.siloserver.silo` and the `group.org.siloserver.silo`
+// team that owns `com.kxvn.ftvsilo` and the `group.com.kxvn.ftvsilo`
 // App Group.
 //
 // Every target xcconfig ends with `#include? "Local.xcconfig"`, so any

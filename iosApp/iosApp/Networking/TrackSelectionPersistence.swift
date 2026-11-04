@@ -28,7 +28,7 @@ import Synchronization
 enum TrackSelectionPersistence {
 
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "TrackPrefs"
     )
 

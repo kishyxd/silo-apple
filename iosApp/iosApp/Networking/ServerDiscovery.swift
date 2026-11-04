@@ -326,7 +326,7 @@ final class ServerDiscovery {
     private static let overlayRefreshInterval: Duration = .seconds(30)
     private let identity = ServerIdentityResolver()
     private let resolver = OverlayNameResolver()
-    private nonisolated static let logger = Logger(subsystem: "org.siloserver.silo", category: "server.discovery")
+    private nonisolated static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "server.discovery")
 
     func start() {
         // Not `browser == nil`: the browser is also nil while a failed one

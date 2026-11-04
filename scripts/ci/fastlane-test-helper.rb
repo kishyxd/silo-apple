@@ -85,10 +85,10 @@ class FastfileHarness
 
   def lane_context
     { SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING => {
-      "org.siloserver.silo" => "app-profile",
-      "org.siloserver.silo.NotificationService" => "notifications-profile",
-      "org.siloserver.silo.DownloadsActivity" => "activity-profile",
-      "org.siloserver.silo.topshelf" => "topshelf-profile"
+      "com.kxvn.ftvsilo" => "app-profile",
+      "com.kxvn.ftvsilo.NotificationService" => "notifications-profile",
+      "com.kxvn.ftvsilo.DownloadsActivity" => "activity-profile",
+      "com.kxvn.ftvsilo.topshelf" => "topshelf-profile"
     } }
   end
 

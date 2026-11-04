@@ -12,7 +12,7 @@ import os
 @Observable
 @MainActor
 final class OnboardingTourGateModel {
-    private static let logger = Logger(subsystem: "org.siloserver.silo", category: "onboarding")
+    private static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "onboarding")
 
     var showTour = false
     var resumeStepId: String?

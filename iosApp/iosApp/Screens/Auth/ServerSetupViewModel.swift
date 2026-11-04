@@ -21,7 +21,7 @@ enum ServerSetupScheme: String, CaseIterable, Identifiable {
 @MainActor
 @Observable
 class ServerSetupViewModel {
-    var host: String = ""
+    var host: String = "silo.kxvn.io"
     var selectedScheme: ServerSetupScheme = .auto
     var port: String = ""
     /// What a running connect is for. Set while `isLoading`.
@@ -52,7 +52,7 @@ class ServerSetupViewModel {
     /// a saved server is picked from Recent.
     private let hasSession: @Sendable () -> Bool
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "ServerSetup"
     )
 

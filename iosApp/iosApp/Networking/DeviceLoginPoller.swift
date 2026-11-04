@@ -51,7 +51,7 @@ enum DeviceLoginPoller {
         case terminal
     }
 
-    private static let logger = Logger(subsystem: "org.siloserver.silo", category: "auth.device-poll")
+    private static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "auth.device-poll")
 
     static func classify(_ error: Error) -> ErrorClass {
         // A v1-only server or a 410 `client_upgrade_required`.

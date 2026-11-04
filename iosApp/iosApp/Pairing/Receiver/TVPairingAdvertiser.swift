@@ -19,7 +19,7 @@ final class TVPairingAdvertiser {
     private var onConnection: ((PairingSession, AsyncThrowingStream<PairingMessage, Error>) -> Void)?
     private var receiverState: PairingReceiverState = .setup
     private var serverIdentity: String?
-    private nonisolated static let logger = Logger(subsystem: "org.siloserver.silo", category: "pairing.advertiser")
+    private nonisolated static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "pairing.advertiser")
 
     /// - Parameters:
     ///   - state: `setup` on the first-run screen; `login` on the sign-in

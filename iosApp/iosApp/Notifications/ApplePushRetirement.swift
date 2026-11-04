@@ -121,7 +121,7 @@ actor ApplePushRetirementQueue {
     private static let unsupportedStatuses: Set<Int> = [404, 405]
 
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "ApplePush"
     )
 

@@ -46,7 +46,7 @@ final class PersonDetailViewModel {
     /// settled — the server refresh ran and this is all the metadata it has.
     private static let metadataRefreshSettledPollCount = 5
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "PersonDetail"
     )
     private let pageSize = 60

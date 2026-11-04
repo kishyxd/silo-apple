@@ -272,7 +272,7 @@ Rules:
 - Servers are matched by `verifiedServerId` when it is known, so the same server under a LAN URL
   and a remote URL does not produce two sections.
 - `ServerEntry` no longer holds a profile. The selected profile belongs to the account.
-- Keychain and preference names gain the account. For example, `org.siloserver.silo.<serverId>.accessToken`
+- Keychain and preference names gain the account. For example, `com.kxvn.ftvsilo.<serverId>.accessToken`
   becomes `signIn.v1.<serverId>.<localAccountId>` on Apple and `<serverId>.<localAccountId>.<key>` on Android.
 
 ### 5.1 Keying local data

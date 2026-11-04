@@ -104,7 +104,7 @@ final class LocalRouteController {
     @ObservationIgnored private let environment: Environment
 
     nonisolated static let probeTimeout: TimeInterval = 3
-    private nonisolated static let logger = Logger(subsystem: "org.siloserver.silo", category: "local.route")
+    private nonisolated static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "local.route")
 
     init(environment: Environment = .live) {
         self.environment = environment

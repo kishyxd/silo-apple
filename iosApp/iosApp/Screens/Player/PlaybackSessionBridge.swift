@@ -452,7 +452,7 @@ actor PlaybackSessionBridge {
     }
 
     private let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "Playback"
     )
 
@@ -1489,7 +1489,7 @@ actor PlaybackSessionBridge {
             try await authority.reportRouteEvent(event)
         } catch {
             Logger(
-                subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+                subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
                 category: "Playback"
             ).warning(
                 "Protocol V3 terminal-start route event failed: \(MediaLogRedactor.sanitize(error), privacy: .public)"

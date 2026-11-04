@@ -818,7 +818,7 @@ final class ReceiverPairingCoordinator {
     /// True while `pollTask` is active. The protocol is one-server-at-a-time;
     /// an overlapping PushServer is ignored.
     private var isPolling = false
-    private static let logger = Logger(subsystem: "org.siloserver.silo", category: "pairing.receiver")
+    private static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "pairing.receiver")
 
     /// - Parameter onAuthenticated: called on the main actor after at least
     ///   one server is signed in, to advance the router to profile selection.
@@ -979,7 +979,7 @@ import OSLog
 final class TVPairingAdvertiser {
     private var listener: NWListener?
     private var busy = false
-    private static let logger = Logger(subsystem: "org.siloserver.silo", category: "pairing.advertiser")
+    private static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "pairing.advertiser")
 
     /// - Parameter onConnection: called on the main actor with an opened
     ///   session + its inbound stream for the coordinator to drive.
@@ -1166,7 +1166,7 @@ final class CompanionPairingCoordinator {
     private var confirmed = false
     private var signedIn: [String] = []
     private var failed: [String] = []
-    private static let logger = Logger(subsystem: "org.siloserver.silo", category: "pairing.companion")
+    private static let logger = Logger(subsystem: "com.kxvn.ftvsilo", category: "pairing.companion")
 
     init(api: PairingDeviceAPI = PairingDeviceAPI(), session: PairingSession, stream: AsyncThrowingStream<PairingMessage, Error>) {
         self.api = api

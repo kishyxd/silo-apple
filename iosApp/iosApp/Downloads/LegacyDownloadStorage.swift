@@ -44,7 +44,7 @@ struct LegacyDownloadStorage: Sendable {
     static let noticeMessage = "Downloads from earlier versions were removed. Download them again to watch offline."
 
     private static let logger = Logger(
-        subsystem: Bundle.main.bundleIdentifier ?? "org.siloserver.silo",
+        subsystem: Bundle.main.bundleIdentifier ?? "com.kxvn.ftvsilo",
         category: "Downloads"
     )
 

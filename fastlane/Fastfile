@@ -310,9 +310,9 @@ TESTFLIGHT_PLATFORMS = {
     output_directory:      "build/ios",
     output_name:           "Silo.ipa",
     targets: {
-      "Silo"                    => "org.siloserver.silo",
-      "SiloNotificationService" => "org.siloserver.silo.NotificationService",
-      "SiloDownloadsActivity"   => "org.siloserver.silo.DownloadsActivity",
+      "Silo"                    => "com.kxvn.ftvsilo",
+      "SiloNotificationService" => "com.kxvn.ftvsilo.NotificationService",
+      "SiloDownloadsActivity"   => "com.kxvn.ftvsilo.DownloadsActivity",
     }.freeze,
   }.freeze,
   tvos: {
@@ -323,8 +323,8 @@ TESTFLIGHT_PLATFORMS = {
     output_directory:      "build/tvos",
     output_name:           "SiloTV.ipa",
     targets: {
-      "SiloTV"         => "org.siloserver.silo",
-      "SiloTVTopShelf" => "org.siloserver.silo.topshelf",
+      "SiloTV"         => "com.kxvn.ftvsilo",
+      "SiloTVTopShelf" => "com.kxvn.ftvsilo.topshelf",
     }.freeze,
   }.freeze,
 }.freeze
@@ -703,7 +703,7 @@ platform :ios do
     # Linux runner. One number for both platforms, so "1.0.0 (66)" names the
     # same build on iPhone and Apple TV and in the release tag v1.0.0-beta.66.
     api_key = setup_api_key
-    app_id  = "org.siloserver.silo"
+    app_id  = "com.kxvn.ftvsilo"
 
     latest = %w[ios appletvos].map do |platform|
       latest_testflight_build_number(api_key: api_key, app_identifier: app_id, platform: platform)

@@ -20,10 +20,10 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>org.siloserver.silo.auth-callback</string>
+			<string>com.kxvn.ftvsilo.auth-callback</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>org.siloserver.silo</string>
+				<string>com.kxvn.ftvsilo</string>
 			</array>
 		</dict>
 	</array>
