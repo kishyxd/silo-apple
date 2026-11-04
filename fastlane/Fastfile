@@ -103,7 +103,10 @@ def source_packages_path
 end
 
 def locked_package_xcargs
-  args = %w[-disableAutomaticPackageResolution -onlyUsePackageVersionsFromResolvedFile]
+  # The committed Package.resolved does not list the test-only dependency
+  # xctest-dynamic-overlay that the generated project adds, so locking the
+  # resolver to that file fails the archive. Let the resolver update the file.
+  args = %w[]
   path = source_packages_path
   args.concat(["-clonedSourcePackagesDirPath", path]) if path
   "#{args.shelljoin} "
@@ -111,8 +114,7 @@ end
 
 def resolve_source_packages(project:, scheme:)
   args = ["xcodebuild", "-project", project, "-scheme", scheme,
-          "-resolvePackageDependencies", "-disableAutomaticPackageResolution",
-          "-onlyUsePackageVersionsFromResolvedFile"]
+          "-resolvePackageDependencies"]
   path = source_packages_path
   args.concat(["-clonedSourcePackagesDirPath", path]) if path
   sh(*args)
