@@ -124,7 +124,7 @@ jobs:
     needs: [setup, release, source]
     # GitHub's Xcode 27 image (in preview). Building with the iOS 27 SDK keeps
     # iPhone Duo out of the letterboxed compatibility mode older SDKs get.
-    runs-on: macos-26
+    runs-on: xcode-27
     env:
       SILO_CACHE_NAMESPACE: production
       SILO_SOURCE_PACKAGES_PATH: ${{ github.workspace }}/.ci-cache/packages
@@ -145,16 +145,15 @@ jobs:
       - name: Select the newest Xcode
         run: |
           set -euo pipefail
-          # Prefer a pinned Xcode if the image has it, otherwise take the newest
-          # one installed. The preview xcode-27 image is not available to forks.
-          if [ -d /Applications/Xcode_27.1.app ]; then
-            sudo xcode-select -s /Applications/Xcode_27.1.app
-          else
-            NEWEST="$(ls -d /Applications/Xcode*.app 2>/dev/null | sort -V | tail -1)"
-            echo "using $NEWEST"
-            sudo xcode-select -s "$NEWEST"
-          fi
-          xcodebuild -version
+          # AetherEngine only compiles under Xcode 27.1, so this image is
+             # required, not a preference.
+             if [ ! -d /Applications/Xcode_27.1.app ]; then
+               echo "::error::Xcode 27.1 is not on this image"
+               ls -d /Applications/Xcode*.app || true
+               exit 1
+             fi
+             sudo xcode-select -s /Applications/Xcode_27.1.app
+             xcodebuild -version
 
       - name: Record device package cache inputs
         id: metadata
