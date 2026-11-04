@@ -1,0 +1,13 @@
+name: xc
+on: workflow_dispatch
+jobs:
+  x:
+    runs-on: macos-26
+    steps:
+      - run: |
+          ls -d /Applications/Xcode*.app || true
+          for a in /Applications/Xcode*.app; do
+            echo "--- $a ---"
+            "$a/Contents/Developer/usr/bin/xcodebuild" -version 2>/dev/null | head -2
+            "$a/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc" --version 2>/dev/null | head -1
+          done
