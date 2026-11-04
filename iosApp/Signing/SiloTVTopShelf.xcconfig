@@ -8,7 +8,7 @@
 // without touching the other targets' xcconfigs.
 
 SILO_TOPSHELF_BUNDLE_ID = com.kxvn.ftvsilo.topshelf
-SILO_TOPSHELF_ENTITLEMENTS = TopShelf/TopShelf.entitlements
+SILO_TOPSHELF_ENTITLEMENTS = TopShelf/TopShelf.personal.entitlements
 SILO_USER_INDEPENDENT_KEYCHAIN = YES
 
 PRODUCT_BUNDLE_IDENTIFIER = $(SILO_TOPSHELF_BUNDLE_ID)

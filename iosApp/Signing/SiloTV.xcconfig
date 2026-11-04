@@ -8,7 +8,7 @@
 // xcconfigs.
 
 SILO_TV_BUNDLE_ID = com.kxvn.ftvsilo
-SILO_TV_ENTITLEMENTS = SiloTV.entitlements
+SILO_TV_ENTITLEMENTS = SiloTV.personal.entitlements
 SILO_USER_INDEPENDENT_KEYCHAIN = YES
 
 PRODUCT_BUNDLE_IDENTIFIER = $(SILO_TV_BUNDLE_ID)
