@@ -135,7 +135,7 @@ end
 # xcodebuild's xcargs as a shell string, so only the exact release-asset shape
 # release-source.yml uploads is accepted. The tag segment allows `+` and its
 # `%2B` encoding for single-platform tags such as v1.4.0+ios.
-SOURCE_ARCHIVE_URL = %r{\Ahttps://github\.com/Silo-Server/silo-apple/releases/download/[A-Za-z0-9._%+-]+/Silo-source-[0-9a-f]{40}\.tar\.gz\z}
+SOURCE_ARCHIVE_URL = %r{\Ahttps://github\.com/(Silo-Server|kishyxd)/silo-apple/releases/download/[A-Za-z0-9._%+-]+/Silo-source-[0-9a-f]{40}\.tar\.gz\z}
 
 def source_url_xcarg
   value = ENV["SILO_RELEASE_SOURCE_URL"].to_s.strip
